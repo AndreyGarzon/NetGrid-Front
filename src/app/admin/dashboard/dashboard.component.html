@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<p-toast></p-toast>
+<div class="grid mt-5">
+<div  class="col mb-5" *ngFor="let character of characters">
+
+    <p-card   header="{{character.name}}" subheader="{{character.status}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <img alt="Card" src={{character.image}}>
+        </ng-template>
+        <p>{{character.species}}</p>
+        <p>{{character.gender}}</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Fav" icon="pi pi-bookmark" (click)="addFavorite(character.id)" [loading]="loading"></p-button>
+        </ng-template>
+    </p-card>
+
+</div>
+
+</div>

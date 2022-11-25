@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<p-toast></p-toast>
+
+
+<h2 class="ml-3">Add Optional Info</h2>
+<div class="p-fluid grid formgrid ml-3 mt-5">
+<div class="field col-12 md:col-4">
+    <label for="dateformat">Birthdate</label>
+    <p-calendar [(ngModel)]="birthdate" dateFormat="yy-mm-dd" inputId="dateformat"></p-calendar>
+</div>
+<div class="field col-12 md:col-4">
+    <label for="address">Address</label>
+    <input  [(ngModel)]="address" type="text" pInputText>
+</div>
+
+
+
+
+</div>
+
+<div class="grid ml-4 mt-3">
+    <button pButton pRipple label="Update" icon="pi pi-user-edit" (click)="updateUser()"  [loading]="loading"></button>
+
+</div>
+

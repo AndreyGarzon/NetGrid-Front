@@ -1,0 +1,27 @@
+
+<p-toast></p-toast>
+  <div class="text-center mb-5">
+    <div class="text-900 text-3xl font-medium mb-3">Sign Up</div>
+    <span class="text-600 font-medium line-height-3">You can create an account here.</span>
+</div>
+
+<div>
+
+    <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="register()">
+        <label for="name" class="block text-900 font-medium mb-2">Name</label>
+        <input id="name" type="text" pInputText class="w-full mb-3"  formControlName="name">
+    <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+    <input id="email1" type="text" pInputText class="w-full mb-3"  formControlName="email">
+
+    <label for="password" class="block text-900 font-medium mb-2">Password</label>
+    <input id="password" type="password" pInputText class="w-full mb-3"  formControlName="password">
+
+
+    <div class="flex align-items-center justify-content-between mb-6">
+        <a routerLink="/auth/login" class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Back to login</a>
+    </div>
+
+    <button pButton pRipple label="Sign up" [loading]="loading" icon="pi pi-key" class="w-full" type="submit" [disabled]="myForm.invalid"></button>
+</form>
+</div>
+
